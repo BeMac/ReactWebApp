@@ -72,5 +72,10 @@ namespace ReactWebApp
 
             return AspNetCoreMvcGuide;
         }
+
+        private string NewNotes()
+        {
+            return string.Empty;
+        }
     }
 }
