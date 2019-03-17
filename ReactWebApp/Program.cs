@@ -20,5 +20,24 @@ namespace ReactWebApp
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>();
+
+
+
+        public int FibonacciGenerator(int input)
+        {
+            if(input <= 1)
+            {
+                return input;
+            }
+            List<int> numberStack = new List<int> {0,1,1};
+            int output = 0;
+            for (int itteration = 2; itteration <= input -1; itteration++)
+            {
+                output = numberStack[itteration] + numberStack[itteration - 1];
+                numberStack.Add(output);
+            }
+
+            return output;
+        }
     }
 }

@@ -77,5 +77,16 @@ namespace ReactWebApp
         {
             return string.Empty;
         }
+
+        public int FibonaciGenerator(int input)
+        {
+            int output = 0;
+            for(int i = 0; i <= input; i++)
+            {
+                output += i;
+            }
+
+            return output;
+        }
     }
 }
